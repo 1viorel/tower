@@ -1,0 +1,20 @@
+table {
+  border-collapse: collapse;
+  margin: 0 auto; /* Center the table horizontally */
+  margin-top: 100px;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.tower {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 10px;
+}

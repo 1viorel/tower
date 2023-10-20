@@ -1,0 +1,9 @@
+<table>
+  <tr *ngFor="let row of table; let i = index">
+    <td *ngFor="let square of row; let j = index" (click)="placeTower(i, j)">
+      <div [class.tower]="square === 1"></div>
+    </td>
+  </tr>
+</table>
+
+
