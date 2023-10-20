@@ -1,0 +1,13 @@
+.center-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.button-reload {
+  width: 425px;
+  background-color: palegoldenrod;
+  border: 1px solid #000;
+  margin-top: 5px;
+  cursor: pointer;
+}

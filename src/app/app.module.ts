@@ -3,11 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
+import { RefreshButtonComponent } from './refresh-button/refresh-button.component';
+import { InfoBoxComponent } from './info-box/info-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    RefreshButtonComponent,
+    InfoBoxComponent
   ],
   imports: [
     BrowserModule

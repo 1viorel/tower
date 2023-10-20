@@ -1,0 +1,14 @@
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box {
+  width: 403px;
+  background-color: white;
+  border: 1px solid #000;
+  margin-top: 5px;
+  padding: 10px;
+  text-align: center;
+}
