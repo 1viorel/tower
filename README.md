@@ -2,7 +2,7 @@
 
 The Tower Problem application is designed to strategically place 7 towers on an 8x8 chessboard following an initial user-placed tower. The app ensures that none of the towers can attack each other.
 
-![Chessboard with Towers](https://imgur.com/a/jWS1BcQ)
+![Chessboard with Towers](https://i.imgur.com/ZCdgDgB.png)
 
 ## Logic
 
@@ -14,13 +14,14 @@ The process begins with the user setting up the first tower, and then the applic
 
 In the early stages of development, the code generated solutions that appeared too systematic. It started from cell (0, 0) and proceeded linearly towards cell (7, 7), inevitably leading to diagonal tower placement.
 
-![Diagonal Tower Placement](https://imgur.com/a/BTOAk73)
+![Diagonal Tower Placement](https://i.imgur.com/2wQDCO9.png)
 
 ## Improved Solution
 
 To create more organic and varied tower placements, a shuffle mechanism was introduced. This mechanism randomly selects an index from 0 to 63 and subjects it to three checks. The tower is placed only if it meets the specified criteria.
 
 ![Shuffle Mechanism](https://i.imgur.com/xbADVWX.png)
+![Checks](https://i.imgur.com/ogRAjMc.png)
 
 ## Performance Considerations
 
