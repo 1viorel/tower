@@ -20,7 +20,7 @@ In the early stages of development, the code generated solutions that appeared t
 
 To create more organic and varied tower placements, a shuffle mechanism was introduced. This mechanism randomly selects an index from 0 to 63 and subjects it to three checks. The tower is placed only if it meets the specified criteria.
 
-![Shuffle Mechanism](https://imgur.com/a/UbGDUcK)
+![Shuffle Mechanism](https://i.imgur.com/xbADVWX.png)
 
 ## Performance Considerations
 
