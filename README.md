@@ -1,27 +1,37 @@
-# Tower
+# The Tower Problem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+The Tower Problem application is designed to strategically place 7 towers on an 8x8 chessboard following an initial user-placed tower. The app ensures that none of the towers can attack each other.
 
-## Development server
+![Chessboard with Towers](https://i.imgur.com/ZCdgDgB.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Logic
 
-## Code scaffolding
+The app operates on an 8x8 chessboard where each cell can contain either a "1" representing a tower or "0" indicating an empty space.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The process begins with the user setting up the first tower, and then the application employs an algorithm to position the remaining towers.
 
-## Build
+## Initial Challenges
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+In the early stages of development, the code generated solutions that appeared too systematic. It started from cell (0, 0) and proceeded linearly towards cell (7, 7), inevitably leading to diagonal tower placement.
 
-## Running unit tests
+![Diagonal Tower Placement](https://i.imgur.com/2wQDCO9.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Improved Solution
 
-## Running end-to-end tests
+To create more organic and varied tower placements, a shuffle mechanism was introduced. This mechanism randomly selects an index from 0 to 63 and subjects it to three checks. The tower is placed only if it meets the specified criteria.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Shuffle Mechanism](https://i.imgur.com/xbADVWX.png)
+![Checks](https://i.imgur.com/ogRAjMc.png)
 
-## Further help
+## Performance Considerations
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+While the shuffle mechanism added variety to the tower placements, it resulted in a significant performance loss. Randomly selecting indices, especially towards the later stages, led to unnecessary checks on invalid positions. Although a solution could be devised by excluding impossible indices, ex: if a tower is placed at index 0, then 1-7, 8, 16, 24, 32, 40, 48, 54 are excluded from the pool, but this approach requires a complex mathematical formula. However, given the project's scope, the current solution is good enough, it wouldn't work for something like a 16x16 board tho.
+## Acknowledgments
+
+This project was with assistance from Stackoverflow and ChatGPT.
+
+## Possible Expansions
+
+Future enhancements could include the option to specify a custom table size. Additionally, the algorithm could be extended to address the "N-Queens" problem, where the objective is to place as many queens as possible on the board without attacking each other. However, full solutions for 8 queens might not always be achieved, primarily due to the absence of backtracking and the user's role in placing the initial queen. Furthermore, there is potential for optimizing the current code to run faster like I mentioned previously.
+
+
